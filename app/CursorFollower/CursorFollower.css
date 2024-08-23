@@ -1,0 +1,17 @@
+#Follower {
+	background-color: black;
+	border-radius: 50%;
+
+	height: 27px;
+	width: 27px;
+
+	display: block;
+	position: fixed;
+	z-index: 555;
+	top: -50px;
+	left: -50px;
+
+	filter: invert(1);
+	/* mix-blend-mode: difference; */
+	/* transform: translate(-40%, -32.5%); */
+}

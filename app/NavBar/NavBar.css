@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+#NavBar {
+	font-family: 'New Amsterdam', sans-serif;
+	position: fixed;
+	background-color: transparent;
+	z-index: 1000;
+
+	color: white;
+	mix-blend-mode: difference;
+}
+
+#AvailableState {
+	transition: 500ms;
+}
+
+#AvailableState1 {
+	animation: State1 8s infinite linear;
+}
+
+#AvailableState2 {
+	animation: State1 8s infinite linear;
+	animation-delay: 4s;
+}
+
+@keyframes State1 {
+	from {
+		transform: translateX(120%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
