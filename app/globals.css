@@ -8,6 +8,12 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'New Amsterdam';
+	src: url('./assets/Fonts/NewAmsterdam-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
 
 html {
 	overflow-x: hidden;
