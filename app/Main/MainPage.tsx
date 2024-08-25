@@ -1,5 +1,7 @@
 import './Main.css';
 
+import ContactLinks from '../ContactLinks/ContactLinks';
+
 function MainPage() {
 	return (
 		<div id='Welcome'>
@@ -20,6 +22,7 @@ function MainPage() {
 					<hr />
 				</div>
 			</div>
+			<ContactLinks />
 		</div>
 	);
 }

@@ -24,7 +24,7 @@
 	font-size: 10vh;
 	font-family: 'Lostar';
 	z-index: 1000;
-	mix-blend-mode: difference;
+	cursor: context-menu;
 }
 
 #Header p {
@@ -33,6 +33,7 @@
 	font-weight: 400;
 	margin-left: 5%;
 	margin-right: 5%;
+	cursor: context-menu;
 }
 
 #Header .MiddleText > h1:nth-child(odd) {
