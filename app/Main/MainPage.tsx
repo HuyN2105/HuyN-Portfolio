@@ -1,6 +1,6 @@
 import './Main.css';
-
 import ContactLinks from '../ContactLinks/ContactLinks';
+import { isMobile } from 'react-device-detect';
 
 function MainPage() {
 	return (
@@ -22,7 +22,7 @@ function MainPage() {
 					<hr />
 				</div>
 			</div>
-			<ContactLinks />
+			{isMobile ? <></> : <ContactLinks />}
 		</div>
 	);
 }
