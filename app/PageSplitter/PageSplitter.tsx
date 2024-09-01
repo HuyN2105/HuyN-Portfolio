@@ -4,7 +4,7 @@ function PageSplitter() {
 	return (
 		<div
 			id='PageSplitter'
-			className='w-[120vw] border-t border-b absolute top-[100vh] z-[999] mix-blend-difference'
+			className='w-[120vh] border-t border-b fixed left-[90vw] z-[999] rotate-90 mix-blend-difference'
 		>
 			<div id='Row1' className='flex whitespace-nowrap'>
 				<div className='Name text-white pr-[2.5vh] font-medium text-[2.75vh]'>
