@@ -23,7 +23,9 @@
 		".next/types/**/*.ts",
 		"**/*.ts",
 		"**/*.tsx",
-		"app/CursorFollower/CursorFollower.jsx"
+		"app/CursorFollower/CursorFollower.jsx",
+		"app/PageSplitter/PageSplitter.tsx",
+		"app/HorizontalScroll/HorizontalScroll.jsx"
 	],
 	"exclude": ["node_modules"]
 }

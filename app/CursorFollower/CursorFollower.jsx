@@ -32,8 +32,8 @@ function CursorFollower() {
 				circle.y = y;
 
 				const nextCircle = circles[index + 1] || circles[0];
-				x += (nextCircle.x - x) * 0.45;
-				y += (nextCircle.y - y) * 0.45;
+				x += (nextCircle.x - x) * 0.35;
+				y += (nextCircle.y - y) * 0.35;
 			});
 
 			requestAnimationFrame(animateCircles);

@@ -4,7 +4,7 @@ import { isMobile } from 'react-device-detect';
 
 function MainPage() {
 	return (
-		<div id='Welcome'>
+		<div id='Welcome' className='panel'>
 			<div id='Header'>
 				<div className='SideText' id='SideText1'>
 					<hr />

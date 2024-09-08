@@ -24,11 +24,17 @@
 
 html {
 	overflow-x: hidden;
+	overflow-y: scroll;
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+
 	background-color: #0b0b0b;
 }
 
-::-webkit-scrollbar {
-	width: 0;
+body {
+	overflow-x: hidden;
+	overflow-y: visible;
 }
 
 @layer utilities {
