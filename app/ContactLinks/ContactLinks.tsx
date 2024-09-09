@@ -12,13 +12,13 @@ function ContactLinks() {
 		gsap.to(NotCloneTargets, {
 			rotationX: 90,
 			transformPerspective: 600,
-			duration: 0.2,
+			duration: 0.15,
 			stagger: 0.1,
 		});
 		gsap.to(CloneTargets, {
 			rotationX: 0,
 			transformPerspective: 600,
-			duration: 0.2,
+			duration: 0.15,
 			stagger: 0.1,
 			delay: 0.075,
 		});
@@ -32,14 +32,14 @@ function ContactLinks() {
 		gsap.to(NotCloneTargets, {
 			rotationX: 0,
 			transformPerspective: 600,
-			duration: 0.2,
+			duration: 0.15,
 			stagger: 0.1,
 			delay: 0.075,
 		});
 		gsap.to(CloneTargets, {
 			rotationX: -90,
 			transformPerspective: 600,
-			duration: 0.2,
+			duration: 0.15,
 			stagger: 0.1,
 		});
 	};

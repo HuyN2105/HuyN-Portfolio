@@ -1,12 +1,15 @@
-import React from 'react';
-
-import Image from 'next/image';
-import './NavBar.css';
 import { isMobile } from 'react-device-detect';
+import Image from 'next/image';
+
+import './NavBar.css';
 
 function NavBar() {
 	return (
-		<div id='NavBar' className='border-b border-white w-full flex bg-[#0b0b0b]'>
+		<div
+			id='NavBar'
+			className='border-b border-white w-full flex'
+			style={{ backgroundColor: '#0b0b0b' }} // Inline style for debugging
+		>
 			<Image
 				className='m-3 ml-6 rounded-full border'
 				src='/Logo-removebg.png'

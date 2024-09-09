@@ -1,10 +1,13 @@
 #NavBar {
 	font-family: 'New Amsterdam', sans-serif;
 	position: fixed;
-	background-color: transparent;
 	z-index: 1000;
-
 	color: white;
+	background-color: #0b0b0b; /* Ensure background color is applied */
+	width: 100%; /* Ensure it spans the full width */
+}
+
+#NavBar > div {
 	mix-blend-mode: difference;
 }
 

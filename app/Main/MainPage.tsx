@@ -1,10 +1,13 @@
 import './Main.css';
 import ContactLinks from '../ContactLinks/ContactLinks';
 import { isMobile } from 'react-device-detect';
+import PageSplitter from '../PageSplitter/PageSplitter';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
 function MainPage() {
 	return (
-		<div id='Welcome' className='panel'>
+		<div id='Welcome' className='panel w-[104vw]'>
 			<div id='Header'>
 				<div className='SideText' id='SideText1'>
 					<hr />
@@ -22,7 +25,22 @@ function MainPage() {
 					<hr />
 				</div>
 			</div>
-			{isMobile ? <></> : <ContactLinks />}
+			{isMobile ? (
+				<></>
+			) : (
+				<>
+					<ContactLinks />
+					<PageSplitter />
+					<div className='absolute right-[6vw] bottom-[1.25vh] m-4 text-white'>
+						SCROLL TO BEGIN YOUR JOURNEY
+						<FontAwesomeIcon
+							icon={faArrowRightFromBracket}
+							className='ml-4 translate-y-1'
+							style={{ color: '#ffffff', fontSize: '1.5rem' }}
+						/>
+					</div>
+				</>
+			)}
 		</div>
 	);
 }

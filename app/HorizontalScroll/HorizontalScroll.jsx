@@ -1,7 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import MainPage from '../Main/MainPage';
 import NavBar from '../NavBar/NavBar';
-import PageSplitter from '../PageSplitter/PageSplitter';
 import CursorFollower from '../CursorFollower/CursorFollower';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -13,6 +12,8 @@ gsap.registerPlugin(ScrollTrigger);
 function HorizontalScroll() {
 	const component = useRef();
 	const slider = useRef();
+
+	const scrollTween = useRef();
 
 	useLayoutEffect(() => {
 		let ctx = gsap.context(() => {
@@ -32,6 +33,7 @@ function HorizontalScroll() {
 				},
 			});
 		}, component);
+		scrollTween.current = ctx;
 		return () => ctx.revert();
 	}, []);
 
@@ -39,11 +41,10 @@ function HorizontalScroll() {
 		<div id='HorizontalScroll' ref={component}>
 			<div
 				id='MainContainer'
-				className='flex flex-nowrap w-[600vw] h-[100vh]'
+				className='flex flex-nowrap w-[520vw] h-[100vh]'
 				ref={slider}
 			>
 				{isMobile ? <></> : <CursorFollower />}
-
 				<NavBar />
 				<MainPage />
 				<MainPage />
