@@ -8,7 +8,7 @@ function NavBar() {
 		<div
 			id='NavBar'
 			className='border-b border-white w-full flex'
-			style={{ backgroundColor: '#0b0b0b' }} // Inline style for debugging
+			style={{ backgroundColor: '#0b0b0b' }}
 		>
 			<Image
 				className='m-3 ml-6 rounded-full border'
@@ -18,7 +18,7 @@ function NavBar() {
 				alt='Logo'
 				id='NavLogoImg'
 			/>
-			<div className='fixed m-4 ml-[80px] text-white text-2xl tracking-widest'>
+			<div className='fixed m-4 ml-[80px] text-white text-2xl tracking-widest cursor-default'>
 				HuyN
 			</div>
 			{isMobile ? (

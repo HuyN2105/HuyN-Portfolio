@@ -31,7 +31,7 @@ function MainPage() {
 				<>
 					<ContactLinks />
 					<PageSplitter />
-					<div className='absolute right-[6vw] bottom-[1.25vh] m-4 text-white'>
+					<div className='absolute right-[6vw] bottom-[1.25vh] m-4 text-white cursor-default'>
 						SCROLL TO BEGIN YOUR JOURNEY
 						<FontAwesomeIcon
 							icon={faArrowRightFromBracket}

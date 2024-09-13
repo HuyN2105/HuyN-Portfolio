@@ -11,7 +11,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 function HorizontalScroll() {
 	const component = useRef();
-	const slider = useRef();
 
 	const scrollTween = useRef();
 
@@ -39,11 +38,7 @@ function HorizontalScroll() {
 
 	return (
 		<div id='HorizontalScroll' ref={component}>
-			<div
-				id='MainContainer'
-				className='flex flex-nowrap w-[520vw] h-[100vh]'
-				ref={slider}
-			>
+			<div id='MainContainer' className='flex flex-nowrap w-[520vw] h-[100vh]'>
 				{isMobile ? <></> : <CursorFollower />}
 				<NavBar />
 				<MainPage />

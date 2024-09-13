@@ -1,8 +1,26 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger);
+
 function PageSplitter() {
+	useLayoutEffect(() => {
+		let ctx = gsap.context(() => {
+			gsap.to('#Row2', {
+				xPercent: 100,
+				ease: 'none',
+				scrollTrigger: {
+					trigger: '#PageSplitter',
+					end: '+=' + window.innerWidth, // End the animation when the bottom of the trigger hits the top of the viewport
+					scrub: true, // Smoothly animate the progress
+					markers: true, // Enable markers for debugging
+				},
+			});
+		});
+		return () => ctx.revert();
+	}, []);
+
 	return (
 		<div
 			id='PageSplitter'
