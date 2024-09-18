@@ -7,16 +7,28 @@ gsap.registerPlugin(ScrollTrigger);
 function PageSplitter() {
 	useLayoutEffect(() => {
 		let ctx = gsap.context(() => {
-			gsap.to('#Row2', {
-				xPercent: 100,
-				ease: 'none',
+			let tl = gsap.timeline({
 				scrollTrigger: {
 					trigger: '#PageSplitter',
-					end: '+=' + window.innerWidth, // End the animation when the bottom of the trigger hits the top of the viewport
-					scrub: true, // Smoothly animate the progress
-					markers: true, // Enable markers for debugging
+					start: 'top top', // Start the animation when the top of the trigger hits the bottom of the viewport
+					end: '+=100vw', // End the animation when the bottom of the trigger hits the top of the viewport
+					scrub: 1,
+					pin: true,
+					markers: false,
 				},
 			});
+
+			tl.to('#Row1', {
+				duration: 1,
+				x: '75%',
+			}).to(
+				'#Row2',
+				{
+					duration: 1,
+					x: '-75%',
+				},
+				0
+			);
 		});
 		return () => ctx.revert();
 	}, []);

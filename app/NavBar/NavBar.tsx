@@ -1,5 +1,6 @@
 import { isMobile } from 'react-device-detect';
 import Image from 'next/image';
+import gsap from 'gsap';
 
 import './NavBar.css';
 
@@ -42,6 +43,24 @@ function NavBar() {
 					</div>
 				</div>
 			)}
+			<div
+				id='ScrollToContainer'
+				className='flex gap-[1vw] text-lg tracking-widest cursor-pointer absolute left-[91vw] m-5 -translate-x-1/2'
+			>
+				<div
+					id='ScrollToProjects'
+					// onClick={() =>
+					// 	gsap.to(window, {
+					// 		duration: 2,
+					// 		scrollTo: { y: '#Projects', offsetY: 70 },
+					// 	})
+					// }
+				>
+					PROJECTS
+				</div>
+				<div id='ScrollToAbout'>ABOUT</div>
+				<div id='ScrollToContact'>CONTACT</div>
+			</div>
 		</div>
 	);
 }
