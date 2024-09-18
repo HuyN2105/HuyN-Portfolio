@@ -20,8 +20,10 @@ function LoadingScreen({ LoadingState }: LoadingScreenProps) {
 	const monitoredVariable = new Proxy({ value: LoadingState }, variableHandler);
 
 	return (
-		<div className='center fixed top-[50vh] left-[50vw] -translate-x-1/2 -translate-y-1/2 text-white cursor-default z-9999 bg-[#0b0b0b]'>
-			LoadingScreen
+		<div className='center fixed text-white cursor-default z-[9999] bg-[#0b0b0b] h-screen w-screen'>
+			<div className='fixed top-[50vh] left-[50vw] -translate-x-1/2 -translate-y-1/2'>
+				LoadingScreen
+			</div>
 		</div>
 	);
 }

@@ -26,7 +26,7 @@ function HorizontalScroll() {
 					trigger: '#MainContainer',
 					pin: true,
 					scrub: 1,
-					snap: 1 / (panels.length - 1),
+					// snap: 1 / (panels.length - 1),
 					start: 'top top',
 					end: () =>
 						'+=' + document.getElementById('MainContainer').scrollWidth,
@@ -39,14 +39,11 @@ function HorizontalScroll() {
 
 	return (
 		<div id='HorizontalScroll' ref={component}>
-			<div id='MainContainer' className='flex flex-nowrap w-[516vw] h-[100vh]'>
+			<div id='MainContainer' className='flex flex-nowrap w-[204vw] h-[100vh]'>
 				{isMobile ? <></> : <CursorFollower />}
 				<NavBar />
 				<MainPage />
 				<Projects />
-				<MainPage />
-				<MainPage />
-				<MainPage />
 			</div>
 		</div>
 	);
