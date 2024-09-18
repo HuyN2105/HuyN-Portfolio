@@ -4,6 +4,8 @@ import './CursorFollower.css';
 import { useEffect } from 'react';
 
 function CursorFollower() {
+	const CursorFollowerAmount = 11;
+
 	useEffect(() => {
 		const coords = { x: -50, y: -50 };
 		const circles = document.querySelectorAll('.circle');
@@ -45,17 +47,9 @@ function CursorFollower() {
 	return (
 		<>
 			<div>
-				<div id='Follower' className='circle'></div>
-				<div id='Follower' className='circle'></div>
-				<div id='Follower' className='circle'></div>
-				<div id='Follower' className='circle'></div>
-				<div id='Follower' className='circle'></div>
-				<div id='Follower' className='circle'></div>
-				<div id='Follower' className='circle'></div>
-				<div id='Follower' className='circle'></div>
-				<div id='Follower' className='circle'></div>
-				<div id='Follower' className='circle'></div>
-				<div id='Follower' className='circle'></div>
+				{Array.from({ length: CursorFollowerAmount }).map((_, index) => (
+					<div key={index} id='Follower' className='circle'></div>
+				))}
 			</div>
 		</>
 	);
