@@ -1,0 +1,17 @@
+#LoadingState1 {
+	animation: State1 10s infinite linear;
+}
+
+#LoadingState2 {
+	animation: State1 10s infinite linear;
+	animation-delay: 5s;
+}
+
+@keyframes State1 {
+	from {
+		transform: translateX(80%);
+	}
+	to {
+		transform: translateX(-130%);
+	}
+}
