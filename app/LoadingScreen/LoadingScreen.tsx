@@ -40,9 +40,9 @@ function LoadingScreen() {
 		});
 		gsap.to('#Loading2', {
 			x: '-100vw',
-			duration: 0.85,
-			ease: 'power1.inOut',
-			delay: 1.125,
+			duration: 0.885,
+			ease: 'sine.inOut',
+			delay: 1.15,
 		});
 	}, [showSplash]);
 

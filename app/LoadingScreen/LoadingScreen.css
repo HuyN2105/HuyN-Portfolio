@@ -1,10 +1,10 @@
 #LoadingState1 {
-	animation: State2 10s infinite linear;
+	animation: State3 10s infinite linear;
 }
 
 #LoadingState2 {
 	animation: State2 10s infinite linear;
-	animation-delay: 5s;
+	animation-delay: 1.75s;
 }
 
 @keyframes State2 {
@@ -13,5 +13,13 @@
 	}
 	to {
 		transform: translateX(-130%);
+	}
+}
+@keyframes State3 {
+	from {
+		transform: translateX(10%);
+	}
+	to {
+		transform: translateX(-200%);
 	}
 }
