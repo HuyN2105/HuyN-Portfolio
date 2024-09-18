@@ -27,7 +27,7 @@ function NavBar() {
 			) : (
 				<div
 					id='AvailableState'
-					className='m-3 overflow-hidden fixed left-[50vw] -translate-x-[60%] tracking-widest font-thin text-xl rounded-3xl h-10 w-[17.5rem] cursor-pointer border flex text-nowrap border-white hover:border-red-600 items-center mix-blend-difference'
+					className='m-3 overflow-hidden relative left-[50vw] -translate-x-[90%] tracking-widest font-thin text-xl rounded-3xl h-10 w-[17.5rem] cursor-pointer border flex text-nowrap border-white hover:border-red-600 items-center mix-blend-difference'
 					onClick={() =>
 						window.open('https://www.linkedin.com/in/nguyen-huy-43aa5a323/')
 					}
