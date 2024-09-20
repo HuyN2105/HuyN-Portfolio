@@ -4,7 +4,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function PageSplitter() {
+interface PageSplitterProps {
+	SplitterID: number;
+}
+
+function PageSplitter({ SplitterID }: PageSplitterProps) {
 	const PageSplitterBannerAmount = 7;
 
 	useLayoutEffect(() => {
@@ -40,30 +44,39 @@ function PageSplitter() {
 			id='PageSplitter'
 			className='rotate-90 w-[120vw] border-t border-b relative translate-x-[42vw] mix-blend-difference'
 		>
-			<div id='Row1' className='flex whitespace-nowrap'>
-				{Array.from({ length: PageSplitterBannerAmount }).map((_) => (
-					<>
-						<div className='Name text-white pr-[2.5vh] font-medium text-[2.75vh]'>
-							HUYNGUYEN
-						</div>
-						<div className='GreenText text-green-500 pr-[2.5vh] font-medium text-[2.75vh]'>
-							FRONT-END DEVELOPER
-						</div>
-					</>
-				))}
-			</div>
-			<div id='Row2' className='flex whitespace-nowrap rotate-180 h-[2.5vh]'>
-				{Array.from({ length: PageSplitterBannerAmount }).map((_) => (
-					<>
-						<div className='Name text-white pr-[2.5vh] font-medium text-[2.75vh]'>
-							HUYNGUYEN
-						</div>
-						<div className='GreenText text-green-500 pr-[2.5vh] font-medium text-[2.75vh]'>
-							FRONT-END DEVELOPER
-						</div>
-					</>
-				))}
-			</div>
+			{SplitterID === 1 ? (
+				<div>
+					<div id='Row1' className='flex whitespace-nowrap'>
+						{Array.from({ length: PageSplitterBannerAmount }).map((_) => (
+							<>
+								<div className='Name text-white pr-[2.5vh] font-medium text-[2.75vh]'>
+									HUYNGUYEN
+								</div>
+								<div className='GreenText text-green-500 pr-[2.5vh] font-medium text-[2.75vh]'>
+									FRONT-END DEVELOPER
+								</div>
+							</>
+						))}
+					</div>
+					<div
+						id='Row2'
+						className='flex whitespace-nowrap rotate-180 h-[2.5vh]'
+					>
+						{Array.from({ length: PageSplitterBannerAmount }).map((_) => (
+							<>
+								<div className='Name text-white pr-[2.5vh] font-medium text-[2.75vh]'>
+									HUYNGUYEN
+								</div>
+								<div className='GreenText text-green-500 pr-[2.5vh] font-medium text-[2.75vh]'>
+									FRONT-END DEVELOPER
+								</div>
+							</>
+						))}
+					</div>
+				</div>
+			) : (
+				<></>
+			)}
 		</div>
 	);
 }

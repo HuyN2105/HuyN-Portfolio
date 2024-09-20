@@ -21,6 +21,12 @@
 	font-weight: normal;
 	font-style: italic;
 }
+@font-face {
+	font-family: 'Hypik';
+	src: url('./assets/Fonts/hypik.otf') format('opentype');
+	font-weight: normal;
+	font-style: italic;
+}
 
 html {
 	overflow-x: hidden;
@@ -28,6 +34,7 @@ html {
 	height: 100%;
 	-webkit-overflow-scrolling: touch;
 	overflow-scrolling: touch;
+	scrollbar-width: thin;
 
 	background-color: #0b0b0b;
 }
@@ -36,6 +43,10 @@ body {
 	overflow-x: hidden;
 	overflow-y: visible;
 }
+/* 
+::-webkit-scrollbar {
+	width: 10px;
+} */
 
 @layer utilities {
 	.text-balance {

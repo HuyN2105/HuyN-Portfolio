@@ -30,19 +30,19 @@ function LoadingScreen() {
 		gsap.to('#LoadingText', {
 			opacity: 0,
 			duration: 0.4,
-			delay: 0.5,
+			delay: 0.35,
 		});
 		gsap.to('#Loading1', {
 			x: '-100vw',
 			duration: 0.9,
 			ease: 'power1.out',
-			delay: 1.15,
+			delay: 0.9,
 		});
 		gsap.to('#Loading2', {
 			x: '-100vw',
 			duration: 0.885,
 			ease: 'sine.inOut',
-			delay: 1.15,
+			delay: 0.9,
 		});
 	}, [showSplash]);
 

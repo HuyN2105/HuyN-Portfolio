@@ -30,7 +30,7 @@ function MainPage() {
 			) : (
 				<>
 					<ContactLinks />
-					<PageSplitter />
+					<PageSplitter SplitterID={1} />
 					<div className='absolute right-[6vw] bottom-[1.25vh] m-4 text-white cursor-default'>
 						SCROLL TO BEGIN YOUR JOURNEY
 						<FontAwesomeIcon
