@@ -13,28 +13,28 @@ function PageSplitter({ SplitterID }: PageSplitterProps) {
 
 	useLayoutEffect(() => {
 		let ctx = gsap.context(() => {
-			let tl = gsap.timeline({
+			gsap.to('#Row2', {
+				xPercent: 25,
+				ease: 'none',
 				scrollTrigger: {
 					trigger: '#PageSplitter',
-					start: 'top top', // Start the animation when the top of the trigger hits the bottom of the viewport
-					end: '+=100vw', // End the animation when the bottom of the trigger hits the top of the viewport
 					scrub: 1,
-					pin: true,
-					markers: false,
+					pinSpacing: true,
+					start: 'top top',
+					end: '+=600%',
 				},
 			});
-
-			tl.to('#Row1', {
-				duration: 1,
-				x: '75%',
-			}).to(
-				'#Row2',
-				{
-					duration: 1,
-					x: '-75%',
+			gsap.to('#Row1', {
+				xPercent: -25,
+				ease: 'none',
+				scrollTrigger: {
+					trigger: '#PageSplitter',
+					scrub: 1,
+					pinSpacing: true,
+					start: 'top top',
+					end: '+=600%',
 				},
-				0
-			);
+			});
 		});
 		return () => ctx.revert();
 	}, []);
@@ -49,10 +49,10 @@ function PageSplitter({ SplitterID }: PageSplitterProps) {
 					<div id='Row1' className='flex whitespace-nowrap'>
 						{Array.from({ length: PageSplitterBannerAmount }).map((_) => (
 							<>
-								<div className='Name text-white pr-[2.5vh] font-medium text-[2.75vh]'>
+								<div className='Name text-white pr-[2.5vh] font-medium text-[3vh]'>
 									HUYNGUYEN
 								</div>
-								<div className='GreenText text-green-500 pr-[2.5vh] font-medium text-[2.75vh]'>
+								<div className='GreenText text-green-500 pr-[2.5vh] font-medium text-[3vh]'>
 									FRONT-END DEVELOPER
 								</div>
 							</>
@@ -64,10 +64,10 @@ function PageSplitter({ SplitterID }: PageSplitterProps) {
 					>
 						{Array.from({ length: PageSplitterBannerAmount }).map((_) => (
 							<>
-								<div className='Name text-white pr-[2.5vh] font-medium text-[2.75vh]'>
+								<div className='Name text-white pr-[2.5vh] font-medium text-[3vh]'>
 									HUYNGUYEN
 								</div>
-								<div className='GreenText text-green-500 pr-[2.5vh] font-medium text-[2.75vh]'>
+								<div className='GreenText text-green-500 pr-[2.5vh] font-medium text-[3vh]'>
 									FRONT-END DEVELOPER
 								</div>
 							</>
