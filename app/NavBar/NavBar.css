@@ -16,19 +16,19 @@
 }
 
 #AvailableState1 {
-	animation: State1 8s infinite linear;
+	animation: State1 10s infinite linear;
 }
 
 #AvailableState2 {
-	animation: State1 8s infinite linear;
-	animation-delay: 4s;
+	animation: State1 10s infinite linear;
+	animation-delay: 5s;
 }
 
 @keyframes State1 {
 	from {
-		transform: translateX(120%);
+		transform: translateX(60%);
 	}
 	to {
-		transform: translateX(-100%);
+		transform: translateX(-150%);
 	}
 }
