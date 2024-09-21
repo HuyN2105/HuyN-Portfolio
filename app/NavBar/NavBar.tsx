@@ -1,8 +1,10 @@
+import './NavBar.css';
 import { isMobile } from 'react-device-detect';
 import Image from 'next/image';
 import gsap from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
-import './NavBar.css';
+gsap.registerPlugin(ScrollToPlugin);
 
 function NavBar() {
 	return (
@@ -27,19 +29,22 @@ function NavBar() {
 			) : (
 				<div
 					id='AvailableState'
-					className='m-3 overflow-hidden relative left-[50vw] -translate-x-[90%] tracking-widest font-thin text-xl rounded-3xl h-10 w-[17.5rem] cursor-pointer border flex text-nowrap border-white hover:border-red-600 items-center mix-blend-difference'
+					className='m-3 overflow-hidden relative left-[50vw] -translate-x-[90%] tracking-widest font-thin text-xl rounded-3xl h-10 w-[17.5rem] cursor-pointer border flex text-nowrap border-white hover:border-green-600 items-center mix-blend-difference'
 					onClick={() =>
 						window.open('https://www.linkedin.com/in/nguyen-huy-43aa5a323/')
 					}
 				>
 					<div
 						id='AvailableState1'
-						className='absolute -translate-x-full z-1000'
+						className='absolute -translate-x-full z-1000 whitespace-nowrap'
 					>
-						CURRENTLY NOT AVAILABLE 🔴
+						AVAILABLE FOR PART TIME POSITION OR INTERNSHIP 🟢
 					</div>
-					<div id='AvailableState2' className='absolute -translate-x-full'>
-						CURRENTLY NOT AVAILABLE 🔴
+					<div
+						id='AvailableState2'
+						className='absolute -translate-x-full whitespace-nowrap'
+					>
+						AVAILABLE FOR PART TIME POSITION OR INTERNSHIP 🟢
 					</div>
 				</div>
 			)}
@@ -49,12 +54,13 @@ function NavBar() {
 			>
 				<div
 					id='ScrollToProjects'
-					onClick={() =>
+					onClick={() => {
+						console.log('SCROLL');
 						gsap.to(window, {
 							duration: 2,
-							scrollTo: { y: '#ProjectsContainer', offsetY: 70 },
-						})
-					}
+							scrollTo: document.getElementById('Welcome').scrollWidth * 2,
+						});
+					}}
 				>
 					PROJECTS
 				</div>
@@ -63,7 +69,7 @@ function NavBar() {
 					onClick={() =>
 						gsap.to(window, {
 							duration: 2,
-							scrollTo: { y: '#AboutContainer', offsetY: 70 },
+							scrollTo: document.getElementById('Welcome').scrollWidth * 4,
 						})
 					}
 				>
