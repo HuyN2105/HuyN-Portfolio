@@ -12,14 +12,14 @@ function ContactLinks() {
 		gsap.to(NotCloneTargets, {
 			rotationX: 90,
 			transformPerspective: 600,
-			duration: 0.15,
-			stagger: 0.1,
+			duration: 0.25,
+			stagger: 0.05,
 		});
 		gsap.to(CloneTargets, {
 			rotationX: 0,
 			transformPerspective: 600,
-			duration: 0.15,
-			stagger: 0.1,
+			duration: 0.25,
+			stagger: 0.05,
 			delay: 0.075,
 		});
 	};
@@ -32,15 +32,15 @@ function ContactLinks() {
 		gsap.to(NotCloneTargets, {
 			rotationX: 0,
 			transformPerspective: 600,
-			duration: 0.15,
-			stagger: 0.1,
+			duration: 0.25,
+			stagger: 0.05,
 			delay: 0.075,
 		});
 		gsap.to(CloneTargets, {
 			rotationX: -90,
 			transformPerspective: 600,
-			duration: 0.15,
-			stagger: 0.1,
+			duration: 0.25,
+			stagger: 0.05,
 		});
 	};
 	const onClickHandler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
