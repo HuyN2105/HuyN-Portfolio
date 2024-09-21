@@ -9,30 +9,53 @@ gsap.registerPlugin(ScrollTrigger);
 function Projects() {
 	useLayoutEffect(() => {
 		let ctx = gsap.context(() => {
-			let FL = gsap.utils.toArray('.FirstLine');
-			gsap.to(FL, {
-				x: '50vw',
+			gsap.to('#FirstLine', {
+				left: '47.5vw',
 				ease: 'none',
-				duration: 1,
-				trigger: '.SecondLine',
+				scrollTrigger: {
+					trigger: '#ProjectsContainer',
+					scrub: 1,
+					pinSpacing: true,
+					start: 'top top',
+					end:
+						'+=' + document.getElementById('ProjectsContainer').scrollWidth * 2,
+				},
+			});
+			gsap.to('#SecondLine', {
+				left: '56vw',
+				ease: 'none',
+				scrollTrigger: {
+					trigger: '#ProjectsContainer',
+					scrub: 1,
+					pinSpacing: true,
+					start: 'top top',
+					end:
+						'+=' + document.getElementById('ProjectsContainer').scrollWidth * 2,
+				},
 			});
 		});
-		return ctx.revert();
-	});
+		return () => ctx.revert();
+	}, []);
 
 	return (
 		<div
 			id='ProjectsContainer'
 			className='panel w-[104vw] min-h-screen text-white relative mix-blend-difference z-[1000] text-center align-middle cursor-default'
 		>
-			<h1 className='absolute top-[50vh] left-[47.5vw] -translate-x-1/2 -translate-y-1/2 text-[15vh] flex'>
-				<p className='FirstLine font-Hypik'>HuyN</p>
-				<p className='FirstLine font-Hypik translate-x-[40%] italic'>'s</p>
-			</h1>
-			<h1 className='SecondLine absolute top-[56.75vh] left-[56vw] -translate-x-1/2 -translate-y-1/2 text-[4vh] tracking-[2vh] font-NewAmsterdam'>
+			<div
+				id='FirstLine'
+				className='absolute top-[50vh] left-[25vw] -translate-x-1/2 -translate-y-1/2 text-[15vh] flex'
+			>
+				<p className='font-Hypik'>HuyN</p>
+				<p className='font-Hypik translate-x-[40%] italic'>'s</p>
+			</div>
+			<div
+				id='SecondLine'
+				className='SecondLine absolute top-[56.75vh] left-[75vw] -translate-x-1/2 -translate-y-1/2 text-[4vh] tracking-[2vh] font-NewAmsterdam'
+			>
 				Adventure
-			</h1>
-			<PageSplitter SplitterID={2} />
+			</div>
+			<PageSplitter SplitterID={1} />
 		</div>
 	);
 }
