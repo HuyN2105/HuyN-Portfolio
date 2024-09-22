@@ -58,7 +58,7 @@ function NavBar() {
 						console.log('SCROLL');
 						gsap.to(window, {
 							duration: 2,
-							scrollTo: document.getElementById('Welcome').scrollWidth * 2,
+							scrollTo: { x: '#Projects' },
 						});
 					}}
 				>
