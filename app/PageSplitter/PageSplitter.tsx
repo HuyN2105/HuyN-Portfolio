@@ -47,31 +47,35 @@ function PageSplitter({ SplitterID }: PageSplitterProps) {
 			{SplitterID === 1 ? (
 				<div>
 					<div id='Row1' className='flex whitespace-nowrap'>
-						{Array.from({ length: PageSplitterBannerAmount }).map((_) => (
-							<>
-								<div className='Name text-white pr-[2.5vh] font-medium text-[3vh]'>
-									HUYNGUYEN
-								</div>
-								<div className='GreenText text-green-500 pr-[2.5vh] font-medium text-[3vh]'>
-									FRONT-END DEVELOPER
-								</div>
-							</>
-						))}
+						{Array.from({ length: PageSplitterBannerAmount }).map(
+							(_, index) => (
+								<React.Fragment key={`row1-${index}`}>
+									<div className='Name text-white pr-[2.5vh] font-medium text-[3vh]'>
+										HUYNGUYEN
+									</div>
+									<div className='GreenText text-green-500 pr-[2.5vh] font-medium text-[3vh]'>
+										FRONT-END DEVELOPER
+									</div>
+								</React.Fragment>
+							)
+						)}
 					</div>
 					<div
 						id='Row2'
 						className='flex whitespace-nowrap rotate-180 h-[2.5vh]'
 					>
-						{Array.from({ length: PageSplitterBannerAmount }).map((_) => (
-							<>
-								<div className='Name text-white pr-[2.5vh] font-medium text-[3vh]'>
-									HUYNGUYEN
-								</div>
-								<div className='GreenText text-green-500 pr-[2.5vh] font-medium text-[3vh]'>
-									FRONT-END DEVELOPER
-								</div>
-							</>
-						))}
+						{Array.from({ length: PageSplitterBannerAmount }).map(
+							(_, index) => (
+								<React.Fragment key={`row2-${index}`}>
+									<div className='Name text-white pr-[2.5vh] font-medium text-[3vh]'>
+										HUYNGUYEN
+									</div>
+									<div className='GreenText text-green-500 pr-[2.5vh] font-medium text-[3vh]'>
+										FRONT-END DEVELOPER
+									</div>
+								</React.Fragment>
+							)
+						)}
 					</div>
 				</div>
 			) : (

@@ -55,6 +55,7 @@ function Projects() {
 			>
 				Adventure
 			</div>
+
 			<PageSplitter SplitterID={1} />
 		</div>
 	);
