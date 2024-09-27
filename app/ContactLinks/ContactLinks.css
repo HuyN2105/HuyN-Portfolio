@@ -1,16 +1,3 @@
 #ContactLinks {
 	perspective: 800px;
 }
-
-.NotClone {
-	transform-origin: top center;
-}
-
-.Clone {
-	transform-origin: bottom center;
-	transform: rotate3d(1, 0, 0, -90deg);
-}
-
-.NiceFont {
-	font-family: 'Playfair Display', courier;
-}

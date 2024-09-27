@@ -19,8 +19,7 @@ function HorizontalScroll() {
 
 	useLayoutEffect(() => {
 		let ctx = gsap.context(() => {
-			let panels = gsap.utils.toArray('#Welcome');
-			panels.push(...gsap.utils.toArray('#ProjectsContainer'));
+			let panels = gsap.utils.toArray('.panel');
 			gsap.to(panels, {
 				xPercent: -100 * (panels.length - 1),
 				ease: 'none',

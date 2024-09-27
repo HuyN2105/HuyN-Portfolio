@@ -3,6 +3,7 @@ import { isMobile } from 'react-device-detect';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import TextBackFlip from '../TextBackFlipEffect/TextBackFlip';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -52,17 +53,20 @@ function NavBar() {
 				id='ScrollToContainer'
 				className='flex gap-[1vw] text-lg tracking-widest cursor-pointer absolute left-[91vw] m-5 -translate-x-1/2'
 			>
-				<div
-					id='ScrollToProjects'
-					onClick={() => {
-						console.log('SCROLL');
-						gsap.to(window, {
-							duration: 2,
-							scrollTo: { x: '#Projects' },
-						});
-					}}
-				>
-					PROJECTS
+				<div id='ScrollToProjects'>
+					<TextBackFlip
+						id='ProjectsPage'
+						text='PROJECTS'
+						onClickHandler={() => {
+							console.log('SCROLL');
+							gsap.to(window, {
+								duration: 2,
+								scrollTo: { x: '#Projects' },
+							});
+						}}
+						ClassN='flex cursor-pointer'
+						customStyleClone='text-[1.25vh] font-bold'
+					/>
 				</div>
 				<div
 					id='ScrollToAbout'
@@ -73,7 +77,19 @@ function NavBar() {
 						})
 					}
 				>
-					ABOUT
+					<TextBackFlip
+						id='AboutPage'
+						text='ABOUT'
+						onClickHandler={() => {
+							console.log('SCROLL');
+							gsap.to(window, {
+								duration: 2,
+								scrollTo: { x: '#Projects' },
+							});
+						}}
+						ClassN='flex cursor-pointer'
+						customStyleClone='text-[1.25vh] font-bold'
+					/>
 				</div>
 				<div id='ScrollToContact'>CONTACT</div>
 			</div>
