@@ -9,7 +9,6 @@ import About from '../About/About';
 import React, { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './HorizontalScroll.css';
 import { isMobile } from 'react-device-detect';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -46,7 +45,7 @@ function HorizontalScroll() {
 			<div id='HorizontalScroll' ref={component}>
 				<div
 					id='MainContainer'
-					className='flex flex-nowrap w-[304vw] h-[100vh]'
+					className='flex flex-nowrap w-[208vw] h-[100vh]'
 				>
 					{isMobile ? <></> : <CursorFollower />}
 					<MainPage />

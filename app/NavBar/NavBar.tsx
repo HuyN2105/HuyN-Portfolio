@@ -4,6 +4,7 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import TextBackFlip from '../TextBackFlipEffect/TextBackFlip';
+import React from 'react';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -26,7 +27,7 @@ function NavBar() {
 				HuyN
 			</div>
 			{isMobile ? (
-				<></>
+				<React.Fragment></React.Fragment>
 			) : (
 				<div
 					id='AvailableState'
@@ -55,43 +56,49 @@ function NavBar() {
 			>
 				<div id='ScrollToProjects'>
 					<TextBackFlip
-						id='ProjectsPage'
+						id='ProjectsPageLink'
 						text='PROJECTS'
 						onClickHandler={() => {
 							console.log('SCROLL');
 							gsap.to(window, {
 								duration: 2,
-								scrollTo: { x: '#Projects' },
+								scrollTo: { x: '#ProjectsContainer' },
 							});
 						}}
 						ClassN='flex cursor-pointer'
-						customStyleClone='text-[1.25vh] font-bold'
+						customStyleClone='text-[1.1vh] font-bold'
 					/>
 				</div>
-				<div
-					id='ScrollToAbout'
-					onClick={() =>
-						gsap.to(window, {
-							duration: 2,
-							scrollTo: document.getElementById('Welcome').scrollWidth * 4,
-						})
-					}
-				>
+				<div id='ScrollToAbout'>
 					<TextBackFlip
-						id='AboutPage'
+						id='AboutPageLink'
 						text='ABOUT'
 						onClickHandler={() => {
 							console.log('SCROLL');
 							gsap.to(window, {
 								duration: 2,
-								scrollTo: { x: '#Projects' },
+								scrollTo: { x: '#AboutContainer' },
 							});
 						}}
 						ClassN='flex cursor-pointer'
-						customStyleClone='text-[1.25vh] font-bold'
+						customStyleClone='text-[1.1vh] font-bold'
 					/>
 				</div>
-				<div id='ScrollToContact'>CONTACT</div>
+				<div id='ScrollToContact'>
+					<TextBackFlip
+						id='ContactPageLink'
+						text='CONTACT'
+						onClickHandler={() => {
+							console.log('SCROLL');
+							gsap.to(window, {
+								duration: 2,
+								scrollTo: { x: '#ContactContainer' },
+							});
+						}}
+						ClassN='flex cursor-pointer'
+						customStyleClone='text-[1.1vh] font-bold'
+					/>
+				</div>
 			</div>
 		</div>
 	);
