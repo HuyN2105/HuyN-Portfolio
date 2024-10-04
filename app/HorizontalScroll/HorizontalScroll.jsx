@@ -27,7 +27,7 @@ function HorizontalScroll() {
 					trigger: '#MainContainer',
 					pin: true,
 					scrub: 1,
-					snap: 1 / (panels.length - 1),
+					// snap: 1 / (panels.length - 1),
 					start: 'top top',
 					end: () =>
 						'+=' +
