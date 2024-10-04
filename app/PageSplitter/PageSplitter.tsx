@@ -54,7 +54,7 @@ function PageSplitter({ SplitterID }: PageSplitterProps) {
 										HUYNGUYEN
 									</div>
 									<div className='GreenText text-green-500 pr-[2.5vh] font-medium text-[3vh]'>
-										FRONT-END DEVELOPER
+										FULL-STACK DEVELOPER
 									</div>
 								</React.Fragment>
 							)
@@ -71,7 +71,7 @@ function PageSplitter({ SplitterID }: PageSplitterProps) {
 										HUYNGUYEN
 									</div>
 									<div className='GreenText text-green-500 pr-[2.5vh] font-medium text-[3vh]'>
-										FRONT-END DEVELOPER
+										FULL-STACK DEVELOPER
 									</div>
 								</React.Fragment>
 							)

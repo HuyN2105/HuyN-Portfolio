@@ -47,8 +47,6 @@ function TextBackFlip({
 		const NotCloneTargets = document.querySelectorAll(`#${id} .Original`);
 		const CloneTargets = document.querySelectorAll(`#${id} .Clone`);
 
-		const Targets = {};
-
 		gsap.to(NotCloneTargets, {
 			rotationX: 0,
 			transformPerspective: 600,
