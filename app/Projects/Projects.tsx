@@ -47,7 +47,7 @@ function Projects() {
 				className='absolute top-[50vh] left-[25vw] -translate-x-1/2 -translate-y-1/2 text-[15vh] flex'
 			>
 				<p className='font-Hypik'>HuyN</p>
-				<p className='font-Hypik translate-x-[40%] italic'>'s</p>
+				<p className='font-Hypik translate-x-[40%] italic'>&#39;s</p>
 			</div>
 			<div
 				id='SecondLine'

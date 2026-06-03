@@ -37,7 +37,7 @@ function PageSplitter({ SplitterID }: PageSplitterProps) {
 			});
 		});
 		return () => ctx.revert();
-	}, []);
+	}, [SplitterID]);
 
 	return (
 		<div

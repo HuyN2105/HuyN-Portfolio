@@ -61,10 +61,10 @@ function LoadingScreen() {
 							id='LoadingState1'
 							className='absolute -translate-x-full z-1000'
 						>
-							PLEASE WAIT, WEBSITE'S CONTENT IS BEING LOADED
+							PLEASE WAIT, WEBSITE&#39;S CONTENT IS BEING LOADED
 						</div>
 						<div id='LoadingState2' className='absolute -translate-x-full'>
-							PLEASE WAIT, WEBSITE'S CONTENT IS BEING LOADED
+							PLEASE WAIT, WEBSITE&#39;S CONTENT IS BEING LOADED
 						</div>
 					</div>
 				</div>

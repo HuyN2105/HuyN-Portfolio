@@ -8,7 +8,7 @@ function About() {
 		>
 			<h1 className='absolute top-[50vh] left-[47.5vw] -translate-x-1/2 -translate-y-1/2 text-[7vh] flex'>
 				<p className='font-Hypik'>HuyN</p>
-				<p className='font-NewAmsterdam translate-x-1/2 italic'>'s</p>
+				<p className='font-NewAmsterdam translate-x-1/2 italic'>&#39;s</p>
 			</h1>
 			<h1 className='absolute top-[57vh] left-[52.5vw] -translate-x-1/2 -translate-y-1/2 text-[7vh] font-NewAmsterdam'>
 				Adventure
