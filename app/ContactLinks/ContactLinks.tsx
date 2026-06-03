@@ -1,6 +1,5 @@
 import React from 'react';
 import './ContactLinks.css';
-import TextBackFlip from '../TextBackFlipEffect/TextBackFlip';
 
 function ContactLinks() {
 	const onClickHandler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -18,24 +17,9 @@ function ContactLinks() {
 			id='ContactLinks'
 			className='absolute flex top-full -translate-y-[200%] text-white ml-[2vw] tracking-tight'
 		>
-			<TextBackFlip
-				id='FB'
-				text='FACEBOOK'
-				onClickHandler={onClickHandler}
-				ClassN='flex cursor-pointer pr-[1.5vw]'
-			/>
-			<TextBackFlip
-				id='IG'
-				text='INSTAGRAM'
-				onClickHandler={onClickHandler}
-				ClassN='flex cursor-pointer pr-[1.5vw]'
-			/>
-			<TextBackFlip
-				id='LI'
-				text='LINKEDIN'
-				onClickHandler={onClickHandler}
-				ClassN='flex cursor-pointer pr-[1.5vw]'
-			/>
+			<div id="FB" onClick={(e) => onClickHandler(e)} className="flex cursor-pointer pr-[1.5vw]">FACEBOOK</div>
+			<div id="IG" onClick={(e) => onClickHandler(e)} className="flex cursor-pointer pr-[1.5vw]">INSTAGRAM</div>
+			<div id="LI" onClick={(e) => onClickHandler(e)} className="flex cursor-pointer pr-[1.5vw]">LINKEDIN</div>
 		</div>
 	);
 }

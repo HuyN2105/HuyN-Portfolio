@@ -42,7 +42,7 @@ function PageSplitter({ SplitterID }: PageSplitterProps) {
 	return (
 		<div
 			id={`PageSplitter-${SplitterID}`}
-			className='rotate-90 w-[120vw] border-t border-b relative translate-x-[42vw] mix-blend-difference'
+			className='rotate-90 w-[120vw] border-t border-b relative translate-x-[42vw] mix-blend-difference cursor-default select-none'
 		>
 			{SplitterID === 1 ? (
 				<div>
