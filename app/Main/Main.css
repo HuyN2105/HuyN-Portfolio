@@ -9,7 +9,6 @@
 	z-index: 999;
 }
 
-/* blurred background */
 #Welcome::before {
 	content: "";
 	position: absolute;
@@ -27,16 +26,6 @@
 	pointer-events: none;
 }
 
-/* dark overlay */
-#Welcome::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: rgba(0, 0, 0, 0.45);
-
-	z-index: 1;
-	pointer-events: none;
-}
 
 #Header {
 	display: flex;
