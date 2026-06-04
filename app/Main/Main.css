@@ -9,6 +9,7 @@
 	z-index: 1000;
 	top: 0;
 	left: 0;
+	margin: 0;
 }
 
 /* blurred background */
@@ -47,6 +48,7 @@
 	font-family: 'CloisterBlack', serif;
 	z-index: 1000;
 	cursor: context-menu;
+	font-weight: normal;
 }
 
 #Header p {
@@ -62,6 +64,7 @@
 	-webkit-text-stroke-width: 0.1px;
 	-webkit-text-stroke-color: white;
 	color: transparent;
+	font-weight: bold;
 }
 
 .SideText {

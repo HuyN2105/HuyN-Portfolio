@@ -15,11 +15,11 @@ function ContactLinks() {
 	return (
 		<div
 			id='ContactLinks'
-			className='absolute flex top-full -translate-y-[200%] text-white ml-[2vw] tracking-tight'
+			className='absolute flex top-full -translate-y-[200%] ml-[2vw] tracking-tight'
 		>
-			<div id="FB" onClick={(e) => onClickHandler(e)} className="flex cursor-pointer pr-[1.5vw]">FACEBOOK</div>
-			<div id="IG" onClick={(e) => onClickHandler(e)} className="flex cursor-pointer pr-[1.5vw]">INSTAGRAM</div>
-			<div id="LI" onClick={(e) => onClickHandler(e)} className="flex cursor-pointer pr-[1.5vw]">LINKEDIN</div>
+			<div id="FB" onClick={(e) => onClickHandler(e)} className="flex cursor-pointer pr-[1.5vw] text-white">FACEBOOK</div>
+			<div id="IG" onClick={(e) => onClickHandler(e)} className="flex cursor-pointer pr-[1.5vw] text-white">INSTAGRAM</div>
+			<div id="LI" onClick={(e) => onClickHandler(e)} className="flex cursor-pointer pr-[1.5vw] text-white">LINKEDIN</div>
 		</div>
 	);
 }
