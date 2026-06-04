@@ -1,5 +1,4 @@
 // Components import
-import WelcomePage from '../Main/WelcomePage';
 import NavBar from '../NavBar/NavBar';
 import CursorFollower from '../CursorFollower/CursorFollower';
 import Projects from '../Projects/Projects';

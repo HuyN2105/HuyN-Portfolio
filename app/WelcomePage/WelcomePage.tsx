@@ -5,6 +5,8 @@ import PageSplitter from '../PageSplitter/PageSplitter';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import * as THREE from 'three';
+import { Canvas } from '@react-three/fiber';
+import { EffectComposer, RenderPass, EffectPass } from "postprocessing";
 
 function WelcomePage() {
 
@@ -12,6 +14,16 @@ function WelcomePage() {
 
 	return (
 		<div id='Welcome' className='panel fixed z-1000'>
+			<div className='container'>
+				<Canvas
+					shadows
+					camera={{
+						position: [0, 0, 20]
+					}}
+				>
+
+				</Canvas>
+			</div>
 			<div id='Header'>
 				<div className='SideText' id='SideText1'>
 					<hr />

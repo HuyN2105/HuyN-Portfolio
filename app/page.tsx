@@ -4,7 +4,7 @@ import React from 'react';
 import HorizontalScroll from './HorizontalScroll/HorizontalScroll';
 import { isMobile } from 'react-device-detect';
 import ContactLinks from './ContactLinks/ContactLinks';
-import WelcomePage from "./Main/WelcomePage";
+import WelcomePage from "./WelcomePage/WelcomePage";
 
 function Home() {
 	return (
