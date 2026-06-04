@@ -1,7 +1,7 @@
 #NavBar {
 	font-family: 'New Amsterdam', sans-serif;
 	position: fixed;
-	z-index: 1000;
+	z-index: 100;
 	color: white;
 	background-color: transparent; /* Ensure background color is applied */
 	width: 100%; /* Ensure it spans the full width */

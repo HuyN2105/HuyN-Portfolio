@@ -4,10 +4,14 @@ import { isMobile } from 'react-device-detect';
 import PageSplitter from '../PageSplitter/PageSplitter';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import * as THREE from 'three';
 
-function MainPage() {
+function WelcomePage() {
+
+
+
 	return (
-		<div id='Welcome' className='panel w-[104vw]'>
+		<div id='Welcome' className='panel fixed z-1000'>
 			<div id='Header'>
 				<div className='SideText' id='SideText1'>
 					<hr />
@@ -15,9 +19,9 @@ function MainPage() {
 					<hr />
 				</div>
 				<div className='MiddleText'>
-					<h1>Huy Nguyen</h1>
-					<h1>Huy Nguyen</h1>
-					<h1>Huy Nguyen</h1>
+					<h1>HUY NGUYEN</h1>
+					<h1>HUY NGUYEN</h1>
+					<h1>HUY NGUYEN</h1>
 				</div>
 				<div className='SideText' id='SideText2'>
 					<hr />
@@ -45,4 +49,4 @@ function MainPage() {
 	);
 }
 
-export default MainPage;
+export default WelcomePage;

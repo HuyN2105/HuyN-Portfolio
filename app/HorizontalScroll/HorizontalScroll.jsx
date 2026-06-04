@@ -1,5 +1,5 @@
 // Components import
-import MainPage from '../Main/MainPage';
+import WelcomePage from '../Main/WelcomePage';
 import NavBar from '../NavBar/NavBar';
 import CursorFollower from '../CursorFollower/CursorFollower';
 import Projects from '../Projects/Projects';
@@ -41,14 +41,14 @@ function HorizontalScroll() {
 
 	return (
 		<>
-			<NavBar />
+			{/*<NavBar />*/}
 			<div id='HorizontalScroll' ref={component}>
 				<div
 					id='MainContainer'
 					className='flex flex-nowrap w-[208vw] h-[100vh]'
 				>
 					{isMobile ? <></> : <CursorFollower />}
-					<MainPage />
+					<NavBar />
 					<Projects />
 				</div>
 			</div>

@@ -5,6 +5,8 @@ import HorizontalScroll from './HorizontalScroll/HorizontalScroll';
 import LoadingScreen from './LoadingScreen/LoadingScreen';
 import { isMobile } from 'react-device-detect';
 import ContactLinks from './ContactLinks/ContactLinks';
+import NavBar from "./NavBar/NavBar";
+import WelcomePage from "./Main/WelcomePage";
 
 function Home() {
 	return (
@@ -21,6 +23,7 @@ function Home() {
 			) : (
 				<>
 					<LoadingScreen />
+					<WelcomePage />
 					<HorizontalScroll />
 				</>
 			)}

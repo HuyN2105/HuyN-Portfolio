@@ -3,12 +3,15 @@
 #Welcome {
 	min-height: 100vh;
 	min-width: 100vw;
-	position: relative;
+	position: fixed;
 	overflow: hidden;
 	isolation: isolate;
-	z-index: 999;
+	z-index: 1000;
+	top: 0;
+	left: 0;
 }
 
+/* blurred background */
 #Welcome::before {
 	content: "";
 	position: absolute;
@@ -26,7 +29,6 @@
 	pointer-events: none;
 }
 
-
 #Header {
 	display: flex;
 	position: absolute;
@@ -41,8 +43,8 @@
 }
 
 #Header h1 {
-	font-size: 10vh;
-	font-family: 'Lostar', serif;
+	font-size: 8vh;
+	font-family: 'CloisterBlack', serif;
 	z-index: 1000;
 	cursor: context-menu;
 }
@@ -57,7 +59,7 @@
 }
 
 #Header .MiddleText > h1:nth-child(odd) {
-	-webkit-text-stroke-width: 0.1vh;
+	-webkit-text-stroke-width: 0.1px;
 	-webkit-text-stroke-color: white;
 	color: transparent;
 }
@@ -71,8 +73,8 @@
 
 .SideText hr {
 	border: 0;
-	border-top: 1.5px solid white;
-	transform: translateY(1.4vh);
+	border-top: 1.4px solid white;
+	transform: translateY(2.25vh);
 }
 
 .SideText > hr {
@@ -86,7 +88,7 @@
 }
 
 #SideText2 {
-	left: 37vh;
+	left: 40vh;
 	order: 3;
 	transform: rotate(90deg);
 }
