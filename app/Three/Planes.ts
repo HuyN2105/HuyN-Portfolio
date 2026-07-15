@@ -12,7 +12,7 @@ export class Planes {
     private textures: any[];
     private hovering: number;
     private initiated: boolean;
-    private uniforms: { uPlaneSize: Uniform<Vector2> };
+    private uniforms: { uPlaneSize: Uniform };
     constructor(sceneManager, images) {
         this.sceneManager = sceneManager;
         this.meshes = [];
@@ -45,7 +45,7 @@ export class Planes {
             window.innerHeight
         );
 
-        const geometry = new THREE.PlaneBufferGeometry(
+        const geometry = new THREE.PlaneGeometry(
             planeMetrics.planeWidth,
             planeMetrics.planeHeight,
             1,
@@ -55,7 +55,6 @@ export class Planes {
             planeMetrics.planeWidth,
             planeMetrics.planeHeight
         );
-        this.uniforms.uPlaneSize.needsUpdate = true;
 
         let translateToLeft = -width / 2 + planeMetrics.planeWidth / 2;
         let x = translateToLeft + planeMetrics.x;
@@ -146,7 +145,7 @@ export class Planes {
             width,
             height
         );
-        const geometry = new THREE.PlaneBufferGeometry(
+        const geometry = new THREE.PlaneGeometry(
             planeMetrics.planeWidth,
             planeMetrics.planeHeight,
             1,
@@ -157,7 +156,6 @@ export class Planes {
             planeMetrics.planeWidth,
             planeMetrics.planeHeight
         );
-        this.uniforms.uPlaneSize.needsUpdate = true;
 
         let translateToLeft = -viewSize.width / 2 + planeMetrics.planeWidth / 2;
         let x = translateToLeft + planeMetrics.x;

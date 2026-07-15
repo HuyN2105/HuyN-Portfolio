@@ -22,10 +22,9 @@ export default class TouchTexture {
     private canvas: HTMLCanvasElement;
     private ctx: CanvasRenderingContext2D;
     private texture: Texture<HTMLCanvasElement, TextureEventMap>;
-    constructor(parent) {
+    private initialized: boolean;
+    constructor(parent?: any) {
         this.size = 64;
-        this.width = window.innerWidth;
-        this.height = window.innerHeight;
         this.width = this.height = this.size;
 
         this.maxAge = 64;
@@ -37,7 +36,14 @@ export default class TouchTexture {
 
         this.trail = [];
         this.last = null;
+        this.initialized = false;
+        this.texture = new THREE.Texture();
+    }
 
+    private ensureTexture() {
+        if (this.initialized) {
+            return;
+        }
         this.initTexture();
     }
 
@@ -49,13 +55,16 @@ export default class TouchTexture {
         this.ctx.fillStyle = "black";
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
-        this.texture = new THREE.Texture(this.canvas);
+        this.texture.image = this.canvas;
         this.canvas.id = "touchTexture";
+        this.texture.needsUpdate = true;
+        this.initialized = true;
         // this.canvas.style.width = this.canvas.style.height = `${
         //   this.canvas.width
         // }px`;
     }
     update(delta) {
+        this.ensureTexture();
         this.clear();
         let speed = this.speed;
         this.trail.forEach((point, i) => {
@@ -83,11 +92,19 @@ export default class TouchTexture {
         // this.test();
         this.texture.needsUpdate = true;
     }
+    getTexture() {
+        return this.texture;
+    }
+    reset() {
+        this.last = null;
+    }
     clear() {
+        this.ensureTexture();
         this.ctx.fillStyle = "black";
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
     }
     addTouch(point) {
+        this.ensureTexture();
         let force = 0;
         let vx = 0;
         let vy = 0;

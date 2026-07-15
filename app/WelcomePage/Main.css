@@ -6,28 +6,11 @@
 	position: fixed;
 	overflow: hidden;
 	isolation: isolate;
-	z-index: 1000;
+	z-index: 3000;
 	top: 0;
 	left: 0;
 	margin: 0;
-}
-
-/* blurred background */
-#Welcome::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-
-	background-image: url("/assets/Images/MainBg.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-
-	filter: blur(12px);
-	transform: scale(1.06);
-
-	z-index: 0;
-	pointer-events: none;
+	background-color: #0b0b0b;
 }
 
 #Header {

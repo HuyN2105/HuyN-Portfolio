@@ -3,19 +3,14 @@ import {Texture, TextureEventMap} from "three";
 import { lerp } from "./utils";
 global.THREE = THREE;
 import createGeometry from "three-bmfont-text";
-
-import font from "./static/SourceSansPro-Black.json";
-import GlyphURL from "./static/SourceSansPro-Black.png";
 import MSDFShader from "three-bmfont-text/shaders/msdf";
 export const loadTextAssets = (assets, loader) => {
-    assets.font = font;
-    loader.begin("glyphs");
-    var glyphsLoader = new THREE.TextureLoader();
-    glyphsLoader.crossOrigin = "";
-    glyphsLoader.load(GlyphURL, glyphs => {
-        assets.glyphs = glyphs;
-        loader.end("glyphs");
-    });
+    if (assets.font) {
+        assets.font = assets.font;
+    }
+    if (assets.glyphs) {
+        assets.glyphs = assets.glyphs;
+    }
 };
 
 export const createTextMaterial = (glyphs, options = {}) => {
@@ -45,7 +40,7 @@ export class Text {
     constructor(sceneManager: any, text: any) {
         this.sceneManager = sceneManager;
         this.glyphs = null;
-        this.font = font;
+        this.font = null;
         this.text = text;
 
         this.baseScale = 1;
@@ -58,15 +53,15 @@ export class Text {
         this.mesh = null;
     }
     load(loader) {
-        loader.begin("glyphs");
-        var glyphsLoader = new THREE.TextureLoader();
-        glyphsLoader.crossOrigin = "";
-        glyphsLoader.load(GlyphURL, glyphs => {
-            this.glyphs = glyphs;
+        if (loader && loader.begin) {
+            loader.begin("glyphs");
             loader.end("glyphs");
-        });
+        }
     }
     init() {
+        if (!this.font || !this.glyphs) {
+            throw new Error("Text assets are not loaded.");
+        }
         const geometry = createGeometry({
             font: this.font,
             align: "center",
